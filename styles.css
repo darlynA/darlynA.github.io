@@ -1,0 +1,296 @@
+header {
+  padding: 60px;
+  color: #fff;
+}
+
+.header-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+.header-nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.header-nav a {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  margin-left: 2rem;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+
+.header-nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.2s ease-in-out;
+}
+
+.header-nav a:hover {
+  color: #0026ff;
+}
+
+.header-nav a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+
+body {
+  background-color: #010529;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: var(--mouse-y);
+  left: var(--mouse-x);
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(30, 23, 131, 0.493), transparent 45%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 1;
+  transition: opacity 0.5s;
+
+}
+
+.text {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  height: min-content;
+  /* 483px */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px;
+  overflow: auto;
+  flex: 1 0 0px;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  border-radius: 0px;
+  border: none;
+}
+
+.content {
+  flex-shrink: 0;
+  width: 100%;
+  height: min-content;
+  /* 283px */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 1000px;
+  overflow: hidden;
+  z-index: 1;
+  position: sticky;
+  padding: 0;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 0;
+  will-change: transform;
+  top: 0;
+  border-radius: 0;
+}
+
+.left {
+  width: 40%;
+  height: 283px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  overflow: hidden;
+  position: relative;
+  gap: 10px;
+  border-radius: 50%;
+  /* Cambiado a 50% para que sea un círculo */
+}
+
+.image {
+  width: 50%;
+  height: auto;
+  border-radius: 45%;
+  object-fit: contain;
+  position: absolute;
+  top: 2rem;
+  right: 15%;
+
+}
+
+.right {
+
+  flex: 1 0 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+  border-radius: 0;
+}
+
+.right h1 {
+  /* Estilos iniciales */
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow: visible;
+  position: relative;
+  font-weight: bold;
+  font-style: normal;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-size: 48px;
+  letter-spacing: 0em;
+  text-decoration: underline;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.right p {
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+  margin-top: 0.5rem;
+  font-size: 17px;
+  color: #aaa;
+}
+
+.degradado {
+  font-weight: bold;
+  background-image: linear-gradient(135deg, #00a2d8, #ede9ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: degradadoAnimacion 2s ease infinite;
+}
+
+@keyframes degradadoAnimacion {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-size: 38px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caracteristica {
+  width: 300px;
+  /* Ancho fijo para ambas cajas */
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.caracteristica img {
+  max-width: 50px;
+  display: block;
+  margin: 0 auto 20px;
+
+}
+
+.imagen-gris {
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.caracteristica h3 {
+  color: #2e2e2e;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.caracteristica p {
+  color: #525252;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.barra-progreso {
+  height: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.barra-progreso span {
+  display: block;
+  height: 100%;
+  background-color: #87ceeb;
+  border-radius: 5px;
+  animation: cargarBarra 2s ease;
+  width: 0;
+
+}
+
+@keyframes cargarBarra {
+  from {
+    width: 0;
+  }
+  
+}
+.barra-progreso span.activado {
+  animation: cargarBarra 2s ease;
+}
