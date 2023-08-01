@@ -61,7 +61,7 @@ body::after {
   left: var(--mouse-x);
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle, rgba(30, 23, 131, 0.493), transparent 45%);
+  background: radial-gradient(circle, rgba(38, 31, 145, 0.493), transparent 45%);
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: -1;
@@ -209,14 +209,13 @@ body::after {
 }
 
 
-h2 {
+.habilidades h2 {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Poppins', sans-serif;
   color: #fff;
   font-size: 38px;
-  margin-top: 50px;
   margin-bottom: 50px;
 
 }
@@ -293,4 +292,76 @@ h2 {
 }
 .barra-progreso span.activado {
   animation: cargarBarra 2s ease;
+}
+
+
+/* SECCION PORTFOLIO */
+.portfolio{
+
+  color: #fff;
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.portfolio .contenido-seccion{
+  max-width: 1100px;
+  margin: auto;
+}
+.portfolio h2{
+  font-size: 48px;
+  text-align: center;
+  padding: 20px 0;
+  font-family: 'Poppins', sans-serif;
+}
+.portfolio .galeria{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.portfolio .galeria .proyecto{
+  position: relative;
+  max-width: 340px;
+  height: fit-content;
+  margin: 10px;
+  cursor: pointer;
+}
+.portfolio .galeria .proyecto img{
+  width: 100%;
+  display: block;
+}
+.portfolio .galeria .proyecto .overlay{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(100, 28, 182, 0.8), rgba(28, 82, 182, 0.8));
+  /*display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  transition: 1s;
+  font-size: 18px;
+  letter-spacing: 3px;
+  opacity: 0;
+ 
+ 
+ 
+  
+}
+
+.portfolio .galeria .proyecto .overlay img {
+ 
+  width: 50px;
+}
+.portfolio .galeria .proyecto .overlay h3{
+  margin-bottom: 20px;
+  margin-top: 100px;
+  transition: 1s;
+  font-family: 'Poppins', sans-serif;
+}
+.portfolio .galeria .proyecto .overlay:hover{
+  opacity: 1;
+}
+.portfolio .galeria .proyecto .overlay:hover h3{
+  margin-bottom: 0px;
+  font-family: 'Poppins', sans-serif;
 }
