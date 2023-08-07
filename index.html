@@ -20,6 +20,20 @@
 </head>
 
 <body>
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+    </div >
     <header class="flex items-center justify-between">
 
         <div class="flex items-center">
@@ -35,11 +49,14 @@
         </nav>
 
     </header>
-    <div class="text" id="text">
+    <section class="superior" >
+        
+    <div class="text" id="text" >
+        
         <div class="content">
 
-            <div class="left">
-                <img style="margin-left: 20rem;" class="image mx-auto" src="imagenes/foto.png" alt="Foto de portafolio">
+            <div class="left" >
+                <img style="margin-left: 20rem;" class="image mx-auto" src="imagenes/foto.png" alt="Foto de portafolio" >
 
             </div>
             <div class="right">
@@ -64,17 +81,22 @@
                 </div>
             </div>
         </div>
+
+        
     </div>
+</section>
+
     <section id="habilidades" class="habilidades">
         
-        <h2>Mis Habilidades</h2>
-        <div class="contenedor">
+        <h2 data-aos="fade-up"
+        data-aos-duration="3000">Mis Habilidades</h2>
+        <div class="contenedor" >
            
-            <div class="caracteristica">
+            <div class="caracteristica" >
                 <div>
                     <img src="imagenes/navegador.png" alt="Front-end" class="imagen-gris">
                 </div>
-                <div>
+                <div >
                     <h3>Front-end</h3>
                     <p>HTML</p>
                     <div class="barra-progreso">
@@ -91,7 +113,7 @@
                 </div>
             </div>
 
-            <div class="caracteristica">
+            <div class="caracteristica" >
                 <div>
                     <img src="imagenes/back-end.png" alt="Back-end" class="imagen-gris">
                 </div>
@@ -114,96 +136,50 @@
         </div>
 
 
-
+        
+        
     </section>
-    <!-- SECCION PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
-        <div class="contenido-seccion">
-            <h2>Portafolio</h2>
-            <div class="galeria">
-                <a title="calculadora" href="https://calculadorapink-darlyng.netlify.app/" target="_blank">
-                    <div class="proyecto">
 
-                        <img src="imagenes\calculadora.png" alt="">
-                        <div class="overlay">
-                            <h3>Calculadora en línea</h3>
-                            <img src="imagenes\html-5.png" alt="" style="display: inline;">
-                            <img src="imagenes\css-3.png" alt="" style="display: inline;">
-                            <img src="imagenes\js.png" alt="" style="display: inline;">
+<!-- sección trabajos -->
+    <section class="trabajos" id="trabajos">
+        <h2 data-aos="fade-up"
+        data-aos-duration="3000">Mis Trabajos</h2>
 
-                        </div>
-                    </div>
-                </a>
+        <nav>
+            <a href="javascript:void(0)" class="borde" id="item" onclick="verCategoria('item')">Todos</a>
+            <a href="javascript:void(0)" class="" id="web" onclick="verCategoria('web')">Web</a>
+            <a href="javascript:void(0)" class="" id="escritorio" onclick="verCategoria('escritorio')">Escritorio</a>
+        </nav>
 
-
-                <a title="calculadora" href="" target="_blank">
-                    <div class="proyecto">
-
-                        <img src="" alt="">
-                        <div class="overlay">
-                            <h3></h3>
-                            <img src="imagenes\html-5.png" alt="" style="display: inline;">
-                            <img src="imagenes\css-3.png" alt="" style="display: inline;">
-                            <img src="imagenes\js.png" alt="" style="display: inline;">
-                        </div>
-                    </div>
-                </a>
-                <a title="calculadora" href="https://calculadorapink-darlyng.netlify.app/" target="_blank">
-                    <div class="proyecto">
-
-                        <img src="" alt="">
-                        <div class="overlay">
-                            <h3></h3>
-                                <img src="imagenes\html-5.png" alt="" style="display: inline;">
-                                <img src="imagenes\css-3.png" alt="" style="display: inline;">
-                                <img src="imagenes\js.png" alt="" style="display: inline;">
-                        </div>
-                    </div>
-                </a>
-                <a title="calculadora" href="" target="_blank">
-                    <div class="proyecto">
-
-                        <img src="" alt="">
-                        <div class="overlay">
-                            <h3></h3>
-                            <img src="imagenes\html-5.png" alt="" style="display: inline;">
-                            <img src="imagenes\css-3.png" alt="" style="display: inline;">
-                            <img src="imagenes\js.png" alt="" style="display: inline;">
-                        </div>
-                    </div>
-                </a>
-                <a title="calculadora" href="" target="_blank">
-                    <div class="proyecto">
-
-                        <img src="" alt="">
-                        <div class="overlay">
-                            <h3>Calculadora en línea</h3>
-                            <img src="imagenes\html-5.png" alt="" style="display: inline;">
-                            <img src="imagenes\css-3.png" alt="" style="display: inline;">
-                            <img src="imagenes\js.png" alt="" style="display: inline;">
-                        </div>
-                    </div>
-                </a>
-                <a title="App: Pausa activa"
-                    href="https://enormous-screw-ee0.notion.site/App-de-Pausa-Activa-para-Trabajadores-en-Entorno-Windows-e04dcc778ada4ed2913a033508597423?pvs=4"
-                    target="_blank">
-                    <div class="proyecto">
-
-                        <img src="imagenes\pausa.png" alt="">
-                        <div class="overlay">
-                            <h3>App: Pausa activa</h3>
-                            <img src="imagenes\ccharp.png" alt="" style="display: inline;">
-
-                        </div>
-                    </div>
-                </a>
+        <div class="galeria" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="3000">
+            <div class="item web">
+                <img src="imagenes\calculadora.png" alt="">
+                <div class="info">
+                    <h3>Calculadora en línea</h3>
+                    <span>html</span><span>css</span><span>javascript</span>
+                    <a  href="https://calculadorapink-darlyng.netlify.app/" target="_blank">Ver Trabajo</a>
+                </div>
+            </div>
+            <div class="item escritorio">
+                <img src="imagenes\pausa.png" alt="">
+                <div class="info">
+                    <h3>App: Pausa activa</h3>
+                    <span>C#</span>
+                    <a href="https://enormous-screw-ee0.notion.site/App-de-Pausa-Activa-para-Trabajadores-en-Entorno-Windows-e04dcc778ada4ed2913a033508597423?pvs=4"
+                    target="_blank">Ver Trabajo</a>
+                </div>
             </div>
         </div>
     </section>
+    
+
 
 
     <!-- SECCION CONTACTO -->
-    <section id="contacto" class="contacto">
+    <section id="contacto" class="contacto"data-aos="fade-up"
+    data-aos-duration="3000">
         <div class="contenido-seccion">
             <h2>Contacto</h2>
 
@@ -234,6 +210,7 @@
         </div>
         </div>
     </section>
+    
 
     <!-- footer -->
     <footer>
@@ -254,6 +231,9 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="javascript.js"></script>
+    <script>
+        AOS.init();
+      </script>
 
 </body>
 
